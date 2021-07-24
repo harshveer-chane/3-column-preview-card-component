@@ -1,0 +1,152 @@
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 15px;
+}
+
+@font-face {
+  font-family: Title;
+  src: url(/assets/Title.woff);
+}
+
+@font-face {
+  font-family: Subtitle;
+  src: url(/assets/Subtitle.woff);
+}
+
+.main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.main-container .grid-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container .grid-container li {
+  list-style: none;
+  max-width: 200px;
+  height: 350px;
+}
+
+.main-container .grid-container li .title {
+  font-family: Title;
+  color: white;
+  font-size: 18px;
+}
+
+.main-container .grid-container li .subtitle {
+  font-family: Subtitle;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.main-container .grid-container .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 50px 80px 190px 100px;
+      grid-template-rows: 50px 80px 190px 100px;
+      grid-template-areas: "icon" "title" "subtitle" "btn";
+  padding: 50px;
+}
+
+.main-container .grid-container .grid .icon {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: icon;
+}
+
+.main-container .grid-container .grid .title {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: title;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.main-container .grid-container .grid .subtitle {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: subtitle;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.main-container .grid-container .grid .learn-more-btn button {
+  cursor: pointer;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: btn;
+  background: none;
+  color: white;
+  outline: none;
+  border: 3px solid white;
+  font-size: 15px;
+  padding: 10px 20px;
+  border-radius: 40px;
+}
+
+.main-container .grid-container .grid .learn-more-btn button:hover {
+  background: white;
+}
+
+.main-container .grid-container .one {
+  background: #e38826;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.main-container .grid-container .one button:hover {
+  color: #e38826;
+}
+
+.main-container .grid-container .two {
+  background: #006970;
+}
+
+.main-container .grid-container .two button:hover {
+  color: #006970;
+}
+
+.main-container .grid-container .three {
+  background: #004241;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.main-container .grid-container .three button:hover {
+  color: #004241;
+}
+/*# sourceMappingURL=style.css.map */

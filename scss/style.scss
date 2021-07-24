@@ -1,0 +1,111 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+@font-face {
+    font-family: Title;
+    src: url(/assets/Title.woff);
+}
+
+@font-face {
+    font-family: Subtitle;
+    src: url(/assets/Subtitle.woff);
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    @include flex;
+    height: 100vh;
+    .grid-container {
+        @include flex;
+        margin: 0;
+        padding: 0;
+        // height: 600px;
+        li {
+            list-style: none;
+            max-width:200px;
+            height: 350px;
+            .title {
+                font-family: Title;
+                // font-family: 'Lexend Deca', sans-serif;
+                color: white;
+                font-size: 18px;
+            }
+            .subtitle {
+                font-family: Subtitle;
+                // font-family: 'Big Shoulders Display', cursive;
+                font-weight: 700;
+                font-size: 13px;
+            }
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 50px 80px 190px 100px;
+            grid-template-areas: 
+            "icon"
+            "title"
+            "subtitle"
+            "btn"
+            ;
+            padding: 50px;
+            .icon {
+                grid-area: icon;
+            }
+            .title {
+                grid-area: title;
+                @include flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+            .subtitle {
+                grid-area: subtitle;
+                color: hsla(0, 0%, 100%, 0.75);
+            }
+            .learn-more-btn {
+                button {
+                    cursor: pointer;
+                    grid-area: btn;
+                    background: none;
+                    color: white;
+                    outline: none;
+                    border: 3px solid white;
+                    font-size: 15px;
+                    padding: 10px 20px;
+                    border-radius: 40px;
+                }
+                button:hover {
+                    background: white;
+                }
+            }
+        }
+        .one {
+            background: hsl(31, 77%, 52%);
+            border-radius: 10px 0px 0px 10px;
+            button:hover {
+                color: hsl(31, 77%, 52%); 
+            }
+        }
+        .two {
+            background: hsl(184, 100%, 22%);
+            button:hover {
+                color:  hsl(184, 100%, 22%); 
+            }
+        }
+        .three {
+            background: hsl(179, 100%, 13%);
+            border-radius: 0px 10px 10px 0px;
+            button:hover {
+                color: hsl(179, 100%, 13%); 
+            }
+        }
+    }
+}
